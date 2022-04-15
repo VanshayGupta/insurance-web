@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    
+    <!-- Loading third party fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|" rel="stylesheet" type="text/css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="fonts/lineo-icon/style.css" rel="stylesheet" type="text/css">
+
+    <!-- Loading main css file -->
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      h1 {
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color: #1392ec;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+      fieldset {
+      border: none;
+      border-top: 1px solid #1392ec;
+      }
+      .account-details, .personal-details {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .account-details >div, .personal-details >div >div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      }
+      .account-details >div, .personal-details >div, input, label {
+      width: 100%;
+      }
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      .checkbox {
+      margin-bottom: 10px;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(100% + 26px);
+      padding: 5px 0;
+      }
+      select {
+      background: transparent;
+      }
+      .gender input {
+      width: auto;
+      } 
+      .gender label {
+      padding: 0 5px 0 0;
+      } 
+      .bdate-block {
+      display: flex;
+      justify-content: space-between;
+      }
+      .birthdate select.day {
+      width: 35px;
+      }
+      .birthdate select.mounth {
+      width: calc(100% - 94px);
+      }
+      .birthdate input {
+      width: 38px;
+      vertical-align: unset;
+      }
+      .checkbox input, .children input {
+      width: auto;
+      margin: -2px 10px 0 0;
+      }
+      .checkbox a {
+      color: #1392ec;
+      }
+      .checkbox a:hover {
+      color: #82b534;
+      }
+      button {
+      width: 100%;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #1392ec; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #1392ec;
+      }
+      @media (min-width: 568px) {
+      .account-details >div, .personal-details >div {
+      width: 50%;
+      }
+      label {
+      width: 40%;
+      }
+      input {
+      width: 60%;
+      }
+      select, .children, .gender, .bdate-block {
+      width: calc(60% + 16px);
+      }
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="main-block">
+    <form action="report.html">
+      <!-- <fieldset>
+        <legend>
+          <h3>Account Details</h3>
+        </legend>
+        <div  class="account-details">
+          <div><label>Email*</label><input type="text" name="name" required></div>
+          <div><label>Password*</label><input type="password" name="name" required></div>
+          <div><label>Repeat email*</label><input type="text" name="name" required></div>
+          <div><label>Repeat password*</label><input type="password" name="name" required></div>
+        </div>
+      </fieldset> -->
+      <fieldset>
+        <legend>
+          <h3>Personal Details</h3>
+        </legend>
+        <div  class="personal-details">
+          <div>
+            <div>
+              <label>Have you suffered from any cardiovascular diseases?*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="cardiovascular" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="cardiovascular" required/>
+                <label for="female" class="radio">No</label>
+              </div>
+              
+            </div>
+            <div>
+              <label>Have you suffered from any liver diseases?*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="liver" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="liver" required/>
+                <label for="female" class="radio">No</label>
+              </div>  
+            </div>
+            <div>
+              <label>Have you suffered from diabetes?*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="diabetes" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="diabetes" required/>
+                <label for="female" class="radio">No</label>
+              </div>
+              
+            </div>
+            <div>
+              <label>Have you suffered from cancer?*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="cancer" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="cancer" required/>
+                <label for="female" class="radio">No</label>
+              
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <label>Smoking*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="smoking" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="smoking" required/>
+                <label for="female" class="radio">No</label>
+              
+              </div>
+              
+            </div>
+            <div>
+              <label>Drinking*</label>
+              <div class="gender">
+                <input type="radio" value="none" id="male" name="drinking" required/>
+                <label for="male" class="radio">Yes</label>
+                <input type="radio" value="none" id="female" name="drinking" required/>
+                <label for="female" class="radio">No</label>
+              
+              </div>
+            </div>
+            <div><label>Weight (in kg)*</label><input type="text" name="weight" required></div>
+            <div><label>Height (in cm)*</label><input type="text" name="height" required></div>
+      
+            
+          </div>
+        </div>
+      </fieldset>
+      
+      <fieldset>
+        <legend>
+          <h3>Terms and Mailing</h3>
+        </legend>
+        <div  class="terms-mailing">
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>I accept the <a href="https://www.w3docs.com/privacy-policy">Terms and Conditions.</a></span>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers from your site</span>
+          </div>
+      </fieldset>
+      <button type="submit" href="report.html">Add Blood Reports</button>
+    </form>
+    </div> 
+    
+  </body>
+</html>
